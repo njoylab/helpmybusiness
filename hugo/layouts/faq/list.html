@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<ul>
+  <li><a href="/{{ .Language }}">{{ .Params.Home }}</a></li>
+  <li><a href="/{{ .Language }}/faq">{{ .Params.FAQ }}</a></li>
+  <li><a href="/{{ .Language }}/poi/add">{{ .Params.AddBusiness }}</a></li>
+</ul>
+<div class="container">
+  <h1 id="title">{{ .Title }}</h1>
+
+  <p>
+    {{ .Params.Description | markdownify  }}
+  </p>
+</div>
+{{ end }}

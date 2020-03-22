@@ -17,4 +17,8 @@ validatePlaceID: Devi prima selezionare una attività da inserire
 validatePlaceURL: Inserisci la pagina dove l'attività propone dei voucher
 sucess: Grazie mille per il contributo, l'attività sarà aggiunta al più presto
 error: Ci spiace, si è verificato un problema, controlla che l'attività non sia già presente
+
+home: Mappa
+faq: FAQ
+addBusiness: Add Business
 ---
