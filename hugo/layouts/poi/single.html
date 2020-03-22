@@ -35,11 +35,7 @@
 <script src="/__/firebase/7.12.0/firebase-firestore.js"></script>
 
 <script>
-  const FirebaseConfig = {
-        apiKey: "{{ .Site.Params.FirebaseApiKey }}",
-        authDomain: "{{ .Site.Params.FirebaseApiKeyAuthDomain }}",
-        projectId: "{{ .Site.Params.FirebaseProjectId }}"
-  };
+
   const lang = {
         validatePlaceID: "{{ .Params.validatePlaceID }}",
         validatePlaceURL: "{{ .Params.validatePlaceURL }}",
@@ -49,7 +45,6 @@
   
 
 var selectedPlace = {}
-firebase.initializeApp(FirebaseConfig);
 
 function initAutocomplete() {
   const input = document.getElementById('business');
@@ -106,6 +101,7 @@ function initAutocomplete() {
               showConfirmButton: false,
               timer: 2000
             })
+            firebase.analytics().logEvent('poi_add_success');
             document.getElementById('url').value = '';
             document.getElementById('contact').value = '';
             document.getElementById('business').value = '';
@@ -116,6 +112,8 @@ function initAutocomplete() {
               title: ':(',
               text: lang.error
             })
+            firebase.analytics().logEvent('poi_add_error');
+
         });
       }
       return false;
