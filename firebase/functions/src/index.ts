@@ -16,7 +16,7 @@ exports.onSavePOI = functions.firestore
         const metadata = {
             contentType: contentType,
             cacheControl: 'public,max-age=0',
-            gzip: false
+            gzip: true
         };
 
         ref.save(JSON.stringify(data), metadata)
