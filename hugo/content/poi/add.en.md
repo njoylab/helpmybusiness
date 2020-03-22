@@ -1,5 +1,11 @@
 ---
 title: Segnala una nuova attività con prevendita voucher
+description: "Se non trovi l'attività che cerchi, provo a controllare su google maps il nome corretto.
+
+Se hai una attività e non hai la possibilità di offrire vouchers online, stiamo cercando una soluzione anche per questo.
+
+
+[Compila questo form](https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMpofblTBczNJ-2_IPTNB6aeiVCQ/viewform), ti contatteremo appena avremo individuato la scelta migliore"
 findLabel: Cerca attività
 findLabelPlaceholder: Cerca l'attività
 giftLabel: Link acquisto voucher

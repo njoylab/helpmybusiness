@@ -3,6 +3,7 @@ baseURL = "https://helpmybusiness-752eb.web.app/"
 theme = "simplemap"
 publishDir = "../firebase/public/"
 defaultContentLanguageInSubdir = true
+contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMpofblTBczNJ-2_IPTNB6aeiVCQ/viewform"
 [languages]
     [languages.en]
         title = "Support our restaurants"
@@ -12,6 +13,7 @@ defaultContentLanguageInSubdir = true
         title = "Supporta le tue attività preferite"
         weight = 2
         languageCode = "it-it"
+        contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform"
 [params]
     MapboxAccessToken = ""
     MapboxTheme = "mapbox://styles/mapbox/light-v10"
