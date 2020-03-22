@@ -67,7 +67,11 @@ function initAutocomplete() {
         errorMsg = lang.validatePlaceURL;
       }
       if( errorMsg !== '') {
-        window.alert(errorMsg);
+        Swal.fire({
+            icon: 'error',
+            title: ':(',
+            text: errorMsg
+          })
       } else {
         const db = firebase.firestore();
         const poi = {
@@ -84,13 +88,22 @@ function initAutocomplete() {
 
         db.collection("{{ .Site.Params.FirestoreCollection }}").doc(selectedPlace.place_id).set(poi)
         .then(function(docRef) {
-            window.alert( lang.sucess);
+            Swal.fire({
+              icon: 'success',
+              title:  lang.sucess,
+              showConfirmButton: false,
+              timer: 2000
+            })
             document.getElementById('url').value = '';
             document.getElementById('contact').value = '';
             document.getElementById('business').value = '';
         })
         .catch(function(error) {
-            window.alert(lang.error);
+            Swal.fire({
+              icon: 'error',
+              title: ':(',
+              text: lang.error
+            })
         });
       }
       return false;
