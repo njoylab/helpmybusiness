@@ -1,24 +1,22 @@
 ---
-title: Segnala una nuova attività con prevendita voucher
-description: "Se non trovi l'attività che cerchi, provo a controllare su google maps il nome corretto.
+title: Add a Local Business
+description: "If you can't find the Local Business you are looking for, please check its name on Google Maps first.
 
-Se hai una attività e non hai la possibilità di offrire vouchers online, stiamo cercando una soluzione anche per questo.
+If you are the owner of a Local Business and you don't yet support the online Gift Cards, we are looking for a solution to help you with it.
+[In the meantime, fill this form](https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMpofblTBczNJ-2_IPTNB6aeiVCQ/viewform), we will contact your as we will have found the best one."
+findLabel: Local business
+findLabelPlaceholder: Enter the name of the local Business
+giftLabel: Gift voucher purchase link
+giftLabelPlaceholder: Enter the exact link where the Business offers its Gift Cards/Vouchers.
+contact: Contact (optional)
+contactPlaceholder: Whom we can contact if we need
+save: Add
+validatePlaceID: Select first a Business to add to the portal.
+validatePlaceURL: Enter a web page link where the Business sell its vouchers/gift cards.
+sucess: Thank you for your contribution. The Business will be soon added to the map.
+error: We are sorry, an error occurred. Please check that the Business is not already added.
 
-
-[Compila questo form](https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMpofblTBczNJ-2_IPTNB6aeiVCQ/viewform), ti contatteremo appena avremo individuato la scelta migliore"
-findLabel: Cerca attività
-findLabelPlaceholder: Cerca l'attività
-giftLabel: Link acquisto voucher
-giftLabelPlaceholder: L'indirizzo web dove poter acquistare il voucher
-contact: Contatto (opzionale)
-contactPlaceholder: Dove possiamo contattarti in caso di bisogno
-save: Salva
-validatePlaceID: Devi prima selezionare una attività da inserire
-validatePlaceURL: Inserisci la pagina dove l'attività propone dei voucher
-sucess: Grazie mille per il contributo, l'attività sarà aggiunta al più presto
-error: Ci spiace, si è verificato un problema, controlla che l'attività non sia già presente
-
-home: Mappa
+home: Map
 faq: FAQ
-addBusiness: Add Business
+addBusiness: Add Local Business
 ---
