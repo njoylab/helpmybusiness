@@ -1,20 +1,20 @@
-#HUGO
+## HUGO
 containts the HUGO project that generate the static website
 
-#Firebase
+## Firebase
 contains the static website generate from HUGO and the function that generate the geojson
 
-#dev site
+## dev site
 cd hugo
 hugo server -D
 
-#deploy site
+## deploy site
 rm -rf firebase/public/
 cd hugo
 hugo --minify
 cd ../firebase
 firebase deploy --only hosting
 
-#deploy functions
+## deploy functions
 cd firebase
 firebase deploy --only functions
