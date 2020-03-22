@@ -223,13 +223,16 @@
     if( $.isEmptyObject(params)) {
       Swal.fire({
         title: '{{ .Title }}',
-        text: '{{ .Description | markdownify }}',
+        text: '{{ .Description }}',
         showCancelButton: true,
         confirmButtonColor: '#0AB1A7',
         cancelButtonColor: '#0AB1A7',
         confirmButtonText: 'Info',
-        cancelButtonText: '{{ .Params.Map }}'
-
+        cancelButtonText: '{{ .Params.Map }}',
+        imageUrl: '/image_opening.png',
+        imageWidth: 285,
+        imageHeight: 150,
+        imageAlt: '{{ .Title }}',
       }).then((result) => {
         if (result.value) {
           document.location = "faq";
