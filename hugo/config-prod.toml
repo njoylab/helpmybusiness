@@ -3,6 +3,7 @@ baseURL = "https://helpmybusiness-752eb.web.app/"
 theme = "simplemap"
 publishDir = "../firebase/public/"
 defaultContentLanguageInSubdir = true
+enableIPtoCoords = true
 contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMpofblTBczNJ-2_IPTNB6aeiVCQ/viewform"
 [languages]
     [languages.en]
