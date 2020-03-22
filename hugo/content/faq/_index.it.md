@@ -1,10 +1,13 @@
 ---
 title: FAQ
-description: "## A cosa serve questo sito?
+description: "
+## A cosa serve questo sito?
 
-In questo momento di 'distanza obbligata' dal COVID-19, molte attività commerciali devono chiudere al pubblico, ma i costi fissi rimangono. Vogliamo dare modo di supportare i nostri ristoranti, locali e negozi del 💚 per poter superare questo momento, e può succedere acquistando ora un Voucher che si potrà utilizzare a fine emergenza.
-L'acquisto avviene direttamente sulla pagina web dell'attività. 
-Acquista ora una Gift Card da usare dopo, aiuta i tuoi posti preferiti.
+In questo momento di 'distanza obbligata' dal COVID-19 molte attività commerciali devono chiudere al pubblico, ma i costi fissi rimangono. Vogliamo dare modo di supportare i nostri ristoranti, locali e negozi del 💚 per poter superare questa emergenza. Un modo per aiutare può essere acquistare ora un Voucher che si potrà utilizzare quando sarà possibile tornare ad uscire.
+L'acquisto evverrà direttamente sulla pagina web dell'attività con le condizioni decise dall'esercente.
+
+
+Compra ora una Gift Card da usare dopo ed aiuta i tuoi posti preferiti a superare questa emergenza.
 
 ## Come è nato?
 
@@ -12,13 +15,13 @@ All'estero ci sono già altre iniziative di questo tipo, come ad esempio negli S
 
 ## Posso contribuire?
 
-Certamente! Anzi, questo sito può essere rilevante solo se supportato dalla community. Se uno dei tuoi posti preferiti non è presente, cerca la pagina dove vende i voucher virtuali [ed inseriscili qua](../poi/add). Oppure se vuoi contribuire a questo sito, trovi tutti i [sorgenti su github](https://github.com/njoylab/helpmybusiness)
+Certamente! Anzi, questo sito può essere rilevante solo se supportato dalla community. Se uno dei tuoi posti preferiti non è presente, cerca la pagina dove vende i voucher virtuali [ed inseriscila qua](../poi/add). Oppure se vuoi contribuire a questo sito, trovi tutti i [sorgenti su github](https://github.com/njoylab/helpmybusiness) oppure [contattaci](https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform).
 
 ## Sono un esercente, come faccio a comparire sul portale?
 
 Se hai già una rivendita online di voucher, [aggiungi la tua attività](../poi/add). Se non hai ancora questa possibilità, stiamo cercando di trovare una soluzione. [Nel frattempo, compila questo form](https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform) e ti contatteremo il prima possibile.
 
-Consigliamo di proporre voucher di piccolo taglio ( 20-30€) e magari scontato. Se la tua situazione non è di emergenza consigliamo di devolvere parte degli incassi in beneficenza agli ospedali e strutture sanitarie.
+Consigliamo di proporre voucher di piccolo taglio ( 20-30€) e se possibile a condizioni vantaggiose. Se la tua situazione non è di emergenza puoi sempre devolvere parte degli incassi in beneficenza agli ospedali e strutture sanitarie.
 
 ## Sono un esercente, non voglio essere in questo sito
 
