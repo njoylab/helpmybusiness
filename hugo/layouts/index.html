@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  {{ partial "meta.html" . }}
+  {{- partial "meta.html" . }}
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
@@ -30,7 +30,7 @@
 
     .btn {
       border: none;
-      background: #4CAF50;
+      background: #0AB1A7;
       color: white;
       padding: 14px 28px;
       font-size: 16px;
@@ -48,11 +48,28 @@
 
     .mapboxgl-ctrl-geocoder {
       min-width: 320px!important;
+      left: 70px;
+    }
+
+    #about {
+      top: 10px;
+      left: 20px;
+      position: absolute;
+      border: none;
+      background: #0AB1A7;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      padding: 0px;
+      border-radius: 50%;
     }
 </style>
 </head>
 <body>
   <div id='map'></div>
+  <div><a href="faq" ><button id="about">Info</button></a></div>
   <script>
     mapboxgl.accessToken = '{{ .Site.Params.MapboxAccessToken }}';
     geoJsonURL = '{{ .Site.Params.GeoJSON }}';
@@ -176,6 +193,41 @@
         }
         return matchingFeatures;
       }
+    }
+
+    function getSearchParameters() {
+      var prmstr = window.location.search.substr(1);
+      return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+    }
+
+    function transformToAssocArray( prmstr ) {
+        var params = {};
+        var prmarr = prmstr.split("&");
+        for ( var i = 0; i < prmarr.length; i++) {
+            var tmparr = prmarr[i].split("=");
+            params[tmparr[0]] = tmparr[1];
+        }
+        return params;
+    }
+
+    const params = getSearchParameters();
+
+    // if it's a direct link we display the message
+    if( $.isEmptyObject(params)) {
+      Swal.fire({
+        title: '{{ .Title }}',
+        text: '{{ .Description | markdownify }}',
+        showCancelButton: true,
+        confirmButtonColor: '#0AB1A7',
+        cancelButtonColor: '#0AB1A7',
+        confirmButtonText: 'Info',
+        cancelButtonText: '{{ .Params.Map }}'
+
+      }).then((result) => {
+        if (result.value) {
+          document.location = "faq";
+        }
+      })
     }
   </script>
 

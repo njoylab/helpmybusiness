@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <ul>
-  <li><a href="/{{ .Language }}">{{ .Params.Home }}</a></li>
+  <li><a href="/{{ .Language }}?internal=1">{{ .Params.Home }}</a></li>
   <li><a href="/{{ .Language }}/faq">{{ .Params.FAQ }}</a></li>
   <li><a href="/{{ .Language }}/poi/add">{{ .Params.AddBusiness }}</a></li>
 
@@ -29,7 +29,6 @@
   </p>
 </div>
 <script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.GooglePlacesKey }}&libraries=places"></script>
-<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 
 <script>
