@@ -1,0 +1,5 @@
+<head>
+    {{ partial "meta.html" . }}
+    {{ $style := resources.Get "css/form.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>

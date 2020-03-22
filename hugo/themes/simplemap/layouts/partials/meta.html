@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+{{ with .Title }}
+    <title>{{ . }}</title>
+{{ end }}
+{{ with .Keywords }}
+    <meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">
+{{ end }}
+<meta property="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="apple-itunes-app" content="app-id=804024567" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://s3-eu-west-1.amazonaws.com/static.urbi.co/w/logo/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">    
+{{ with . }}
+{{ template "_internal/opengraph.html" . }}
+{{ end }}
+{{ template "_internal/twitter_cards.html" . }}

@@ -1,0 +1,110 @@
+{{ define "main" }}
+<!--  AIzaSyC2DZBiWOAN2mfSrCjB7uyUCpjavvuLtwc -->
+<div class="container">
+  <h1 id="title">{{ .Title }}</h1>
+
+  <form action="#" onsubmit="return savePOI()">
+
+    <label for="fname">{{ .Params.FindLabel }}</label>
+    <input type="text" id="business" name="business" placeholder="{{ .Params.FindLabelPlaceholder }}">
+
+    <label for="lname">{{ .Params.GiftLabel }}</label>
+    <input type="text" id="url" name="url" placeholder="{{ .Params.GiftLabelPlaceholder }}">
+
+    <label for="subject">{{ .Params.Contact }}</label>
+    <input type="text" id="contact" name="contact" placeholder="{{ .Params.ContactPlaceholder }}">
+
+    <input type="submit" value="{{ .Params.Save }}">
+
+  </form>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.GooglePlacesKey }}&libraries=places"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+<script>
+  const FirebaseConfig = {
+        apiKey: "{{ .Site.Params.FirebaseApiKey }}",
+        authDomain: "{{ .Site.Params.FirebaseApiKeyAuthDomain }}",
+        projectId: "{{ .Site.Params.FirebaseProjectId }}"
+  };
+  const lang = {
+        validatePlaceID: "{{ .Params.validatePlaceID }}",
+        validatePlaceURL: "{{ .Params.validatePlaceURL }}",
+        sucess: "{{ .Params.sucess }}",
+        error: "{{ .Params.error }}"
+  };
+  
+
+var selectedPlace = {}
+firebase.initializeApp(FirebaseConfig);
+
+function initAutocomplete() {
+  const input = document.getElementById('business');
+  const options = {
+      types:['establishment'],
+      componentRestrictions:{'country': ['it']}
+  };
+  const autocomplete = new google.maps.places.Autocomplete(input, options);
+  autocomplete.setFields(['formatted_address', 'geometry', 'name', 'place_id','photos']);
+  autocomplete.addListener('place_changed', function() {
+      const place = autocomplete.getPlace();
+
+      if (!place.geometry) {
+        return;
+      }
+      selectedPlace = place;
+    });
+  }
+  function savePOI() {
+      var errorMsg = '';
+      const url = document.getElementById('url').value;
+      const contact = document.getElementById('contact').value;
+
+      if( !selectedPlace.place_id || !selectedPlace.geometry || !selectedPlace.name ) {
+        errorMsg = lang.validatePlaceID;
+      } else if( !validURL(url)) {              
+        errorMsg = lang.validatePlaceURL;
+      }
+      if( errorMsg !== '') {
+        window.alert(errorMsg);
+      } else {
+        const db = firebase.firestore();
+        const poi = {
+            placeID: selectedPlace.place_id,
+            location: new firebase.firestore.GeoPoint(selectedPlace.geometry.location.lat(), selectedPlace.geometry.location.lng()),
+            url: url,
+            title: selectedPlace.name,
+            image: selectedPlace.photos[0].getUrl({maxWidth: 200, maxHeight: 200}),
+            address: selectedPlace.formatted_address,
+            contact: contact,
+            status: 'new',
+            created: new Date()
+        };
+
+        db.collection("{{ .Site.Params.FirestoreCollection }}").doc(selectedPlace.place_id).set(poi)
+        .then(function(docRef) {
+            window.alert( lang.sucess);
+            document.getElementById('url').value = '';
+            document.getElementById('contact').value = '';
+            document.getElementById('business').value = '';
+        })
+        .catch(function(error) {
+            window.alert(lang.error);
+        });
+      }
+      return false;
+  }
+
+  function validURL(str) {
+    const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    return !!pattern.test(str);
+  }
+  initAutocomplete();
+</script>
+{{ end }}

@@ -1,0 +1,7 @@
+[
+  {
+    "origin": ["https://helpmybusiness-752eb.web.app/","https://helpmybusiness-752eb.firebaseapp.com/"],
+    "method": ["GET"],
+    "maxAgeSeconds": 300 
+  }
+]

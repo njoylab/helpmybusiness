@@ -1,0 +1,23 @@
+DefaultContentLanguage = "en"
+baseURL = "https://helpmybusiness-752eb.web.app/"
+theme = "simplemap"
+publishDir = "../firebase/public/"
+[languages]
+    [languages.en]
+        title = "Support our restaurants"
+        weight = 1
+        languageCode = "en-us"
+     [languages.it]
+        title = "Supporta le tue attività preferite"
+        weight = 2
+        languageCode = "it-it"
+[params]
+    MapboxAccessToken = ""
+    MapboxTheme = "mapbox://styles/mapbox/light-v10"
+    GeoJSON = "https://storage.googleapis.com/helpmybusiness-752eb.appspot.com/poi/poi.gjson?v1"
+    FirebaseApiKey = ""
+    FirebaseApiKeyAuthDomain = ""
+    FirebaseProjectId = ""
+    FirestoreCollection = "poi"
+    GooglePlacesKey = ""
+    
