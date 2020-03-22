@@ -1,5 +1,5 @@
 ---
-title: Help your local businesses
-gotoVoucher: Go to shop
+title: Help your favourite local businesses
+gotoVoucher: Get a Gift Card
 searchsuggestion: Search ...
 ---
