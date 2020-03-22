@@ -4,17 +4,21 @@
   }
   
   h1 {
-    color: #0AB1A7; 
+    color: #003844; 
     font-weight: 400;
   }
   
   label {
-    color: #0AB1A7; 
+    color: #003844; 
     font-size: large;
   }
   
   p {
     font-size: medium;
+    color: #003844;
+    line-height: 30px;
+    font-weight: 350;
+    margin-bottom: 40px;
   }
   
   a {
@@ -27,6 +31,7 @@
     margin: 10px;
     overflow: hidden;
     background-color: #0AB1A7;
+    font-size: 16px;
   }
   
   li {
@@ -47,11 +52,6 @@
   }
 
   /* Style inputs with type="text", select elements and textareas */
-
-
-  input {
-    color: #c5ced3;
-  }
   
   input[type=text], select, textarea {
     width: 100%; /* Full width */
@@ -59,7 +59,7 @@
     border: 2px solid #C5CED3; /* Gray border */
     border-radius: 8px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
+    margin-top: 12px; /* Add a top margin */
     margin-bottom: 32px; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
     font-family: 'Roboto';
@@ -71,7 +71,7 @@
     background-color: #0AB1A7;
     padding: 12px 100px;
     border: none;
-    border-radius: 120px;
+    border-radius: 12px;
     cursor: pointer;
     font-size: medium;
     font-weight: bold;
