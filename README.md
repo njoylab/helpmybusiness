@@ -11,7 +11,7 @@ hugo server -D
 ## deploy site
 rm -rf firebase/public/
 cd hugo
-hugo --minify
+hugo --minify --config=config-prod.toml
 cd ../firebase
 firebase deploy --only hosting
 
