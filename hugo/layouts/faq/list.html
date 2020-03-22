@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <ul>
-  <li><a href="/{{ .Language }}">{{ .Params.Home }}</a></li>
+  <li><a href="/{{ .Language }}?internal=1">{{ .Params.Home }}</a></li>
   <li><a href="/{{ .Language }}/faq">{{ .Params.FAQ }}</a></li>
   <li><a href="/{{ .Language }}/poi/add">{{ .Params.AddBusiness }}</a></li>
 </ul>

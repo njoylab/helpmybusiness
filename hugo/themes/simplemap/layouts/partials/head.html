@@ -2,5 +2,4 @@
     {{ partial "meta.html" . }}
     {{ $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
