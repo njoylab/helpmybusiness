@@ -2,6 +2,7 @@ DefaultContentLanguage = "en"
 baseURL = "https://helpmybusiness-752eb.web.app/"
 theme = "simplemap"
 publishDir = "../firebase/public/"
+defaultContentLanguageInSubdir = true
 [languages]
     [languages.en]
         title = "Support our restaurants"
