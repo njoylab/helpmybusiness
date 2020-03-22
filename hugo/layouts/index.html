@@ -45,20 +45,26 @@
       margin-left: auto;
       margin-right: auto;
     }
+
+    .mapboxgl-ctrl-geocoder {
+      min-width: 320px!important;
+    }
 </style>
 </head>
 <body>
   <div id='map'></div>
   <script>
     mapboxgl.accessToken = '{{ .Site.Params.MapboxAccessToken }}';
-
-    var map = new mapboxgl.Map({
+    geoJsonURL = '{{ .Site.Params.GeoJSON }}';
+    const map = new mapboxgl.Map({
       container: 'map',
       style: '{{ .Site.Params.MapboxTheme }}',
       center: [9.188686, 45.46435], 
       zoom: 12 
     });
     
+    var features = [];
+    map.addControl(new mapboxgl.NavigationControl());
     map.addControl(
         new mapboxgl.GeolocateControl({
             positionOptions: {
@@ -67,13 +73,26 @@
         trackUserLocation: false
         })
     );
-    map.addControl(new mapboxgl.NavigationControl());
+    map.addControl(
+            new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken + "a" , // the only way to disable remote calls :(
+            localGeocoder: forwardGeocoder,
+            localGeocoderOnly: true,
+            zoom: 14,
+            mapboxgl: mapboxgl,
+            placeholder: '{{ .Params.Searchsuggestion }}',
+            enableEventLogging: false,
+            marker: false
+            }), 'top-left'
+        );
+
 
     map.on('load', function() {
         map.addSource('poi', {
             type: 'geojson',
-            data: '{{ .Site.Params.GeoJSON }}'
+            data: geoJsonURL
         });
+        
         map.loadImage( '/marker.png',
           function(error, image) {
               if (error) throw error;
@@ -89,7 +108,7 @@
                 // 'text-field': ['get', 'title'],
                 // 'text-anchor': 'top' 
                     'icon-image': 'marker',
-                    'icon-size': 0.18
+                    'icon-size': 1
                   }
               });
         });
@@ -120,6 +139,37 @@
               map.getCanvas().style.cursor = '';
             });
     });
+
+    function forwardGeocoder(query) {
+
+      if( features.length == 0 ) {
+        $.getJSON( geoJsonURL, function( data ) {
+              features = [];
+              $.each( data.features, function( key, val ) {
+                features.push( {title:val.properties.title, address:val.properties.address, coordinates:val.geometry.coordinates} );
+              });
+              return forwardGeocoder( query)
+          });
+      } else {
+        var matchingFeatures = [];
+        for (var i = 0; i < features.length; i++) {
+          var feature = features[i];
+          // handle queries with different capitalization than the source data by calling toLowerCase()
+          if (
+            feature.title
+            .toLowerCase()
+            .search(query.toLowerCase()) !== -1
+           ) {
+          feature['place_name'] = '💚' + feature.title + ' - ' + feature.address ;
+          feature['center'] = feature.coordinates;
+          feature['place_type'] = [''];
+
+          matchingFeatures.push(feature);
+          }
+        }
+        return matchingFeatures;
+      }
+    }
   </script>
 
 </body>
