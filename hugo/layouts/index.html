@@ -88,6 +88,12 @@
 
 
     map.on('load', function() {
+      $.getJSON( 'https://ipapi.co/json/', function( data ) {
+          if( data.latitude && data.longitude) {
+            map.center = [data.longitude, data.latitude];
+          }
+      })
+      
         map.addSource('poi', {
             type: 'geojson',
             data: geoJsonURL
