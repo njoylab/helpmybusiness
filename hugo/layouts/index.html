@@ -144,8 +144,10 @@
               });
         });
         map.on('click', 'pois', function(e) {
-            const coordinates = e.features[0].geometry.coordinates.slice();        
-            const description =`<h3>${e.features[0].properties.title}</h3><span>${e.features[0].properties.address}</span><img class="preview" src="${e.features[0].properties.image}" /><a href="${e.features[0].properties.url}" target="_blank"><button class="btn info">{{ .Params.gotoVoucher }}</button></a>`
+          console.log("{{.Params.gotoVoucher}}")
+            const coordinates = e.features[0].geometry.coordinates.slice();       
+            const action = "{{ .Params.gotoVoucher }}";
+            const description =`<h3>${e.features[0].properties.title}</h3><span>${e.features[0].properties.address}</span><img class="preview" src="${e.features[0].properties.image}" /><a href="${e.features[0].properties.url}" target="_blank"><button class="btn info">${action}</button></a>`
 
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
