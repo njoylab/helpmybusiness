@@ -77,7 +77,7 @@
 </head>
 <body>
   <div id='map'></div>
-  <div><a href="faq" ><button id="about">Info</button></a></div>
+  <div><a href="faq" ><button id="about">{{ .Params.Info }}</button></a></div>
   <script>
     mapboxgl.accessToken = '{{ .Site.Params.MapboxAccessToken }}';
     geoJsonURL = '{{ .Site.Params.GeoJSON }}';
@@ -233,7 +233,7 @@
         showCancelButton: true,
         confirmButtonColor: '#0AB1A7',
         cancelButtonColor: '#0AB1A7',
-        confirmButtonText: 'Info',
+        confirmButtonText: '{{ .Params.Info }}',
         cancelButtonText: '{{ .Params.Map }}',
         imageUrl: '/image_opening.png',
         imageWidth: 285,

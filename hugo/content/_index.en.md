@@ -5,7 +5,6 @@ description: "A lot of Local Businesses are in difficult economic times because 
 Get a Gift Card now to use in the future, help your favourite places or help us increase the proposed list!"
 gotoVoucher: Get a Gift Card
 searchsuggestion: Search...
-
 map: Go to the Map
-
+info: FAQ
 ---
