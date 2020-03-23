@@ -80,7 +80,8 @@
   <div><a href="faq" ><button id="about">{{ .Params.Info }}</button></a></div>
   <script>
     mapboxgl.accessToken = '{{ .Site.Params.MapboxAccessToken }}';
-    geoJsonURL = '{{ .Site.Params.GeoJSON }}';
+    const ts = Math.round(new Date().getTime() / 60000);
+    geoJsonURL = '{{ .Site.Params.GeoJSON }}?' + ts;
     const map = new mapboxgl.Map({
       container: 'map',
       style: '{{ .Site.Params.MapboxTheme }}',
