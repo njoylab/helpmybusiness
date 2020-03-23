@@ -1,37 +1,37 @@
 ---
 title: FAQ
-description: "## Cosa fa questo sito?
+description: "## What is this website?
 
-In questo momento di difficoltà molte attività commerciali devono chiudere, ma i costi fissi rimangono. Acquistando ora un voucher che si utilizzerà a fine emergenza diamo modo di supportare i nostri esercenti del 💚. 
+Love Our Locals is a directory of any Local Business type that offer online gift cards/vouchers for purchase. In this difficult time caused by the COVID-19, many places must stay closed for their andour health, but their fixed costs stays. We want to help them out to make sure we will be able to enjoy those loved locations when our lifestyle will go back to normal. By purchasing a Gift Card for a future user, you will support you favourite locations now!
 
-## Come è nato?
+## Where did it start?
 
-All'estero ci sono già altre iniziative di questo tipo, come ad esempio negli Stati Uniti: https://saveourfaves.org/ . Abbiamo pensato di fare la stessa cosa anche per il resto del pianeta partendo da Milano
+In the US there are already similar initiatives, as for example: https://saveourfaves.org/ . We thought to help out as well, with a global project starting from our hometown, Milan.
 
-## Posso contribuire?
+## Can i help?
 
-Certamente! Anzi, questo sito può essere rilevante solo se supportato dalla community. Se uno dei tuoi posti preferiti non è presente, cerca la pagina dove vende i voucher virtuali [ed inseriscili qua](../poi/add). Oppure se vuoi contribuire a questo sito, trovi tutti i [sorgenti su githib](https://github.com/njoylab/helpmybusiness)
+Sure thing! Actually, this website has a real meaning if it is supported by the community. If one of your favourite places is not yet on our portal, look for the webpage link where it sells its voucher, and add it directly [here](../poi/add). Otherwise, if you want to help with the project, you find the [project here on github](https://github.com/njoylab/helpmybusiness).
 
-## Sono un esercente, come faccio a comparire?
+## I am a Local Business Owner, can I be on your portal?
 
-Se hai già una rivendita online di voucher [inserisci la tua attività](../poi/add). Se non hai ancora questa possibilità stiamo cerando di trovare una soluzione. [Compila questo form](https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform) e ti contatteremo il prima possibile.
+If you are already selling online voucher/Gift Cards, [add your Business here](../poi/add). If you don't support it yet, we are looking for a solution for you. [Complete this form](https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform) and we will contact you as soon as possible.
 
-Consigliamo di proporre voucher di taglio basso ( 20-30€) e magari scontato. Se la tua situazione non è di emergenza consigliamo di devolvere parte degli incassi in beneficenza.
+In general we suggest to propose small cuts vouchers ( 20-30€), o maybe discounted. If your Business is not in emergency, we suggest to donate everything to hospitals or sanitary structures which at the moment are in need.
 
-## Sono un esercente, non voglio essere in questo sito
+## I am a Local Business Owner, I don't want to be on your portal
 
-Ci dispiace, ma se per qualsiasi motivo voi essere delistato ti chiediamo di [scriverci](https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform)
+If you want to be removed from our portal, just[write us](https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform). We are sorry to hear it didn't help you.
 
-## Come posso aiutare ulteriormente?
+## How can I help more?
 
-In generale \"stai a casa\" ( cit) e cerca di ordinare almeno una volta a settimana il delivery online. Ricordati di dare una mancia a chi ti consegna il cibo quando lo ordini.
+\"Stay at home\" ( cit.) and if possible order food delivery at least once a week. And if you wish to give a small tip to those who are bringing it to you, it's even nicer, it's a difficult time for them as well.
 
-## Chi siete?
+## Who are you?
 
-Serena Schimd ed Emiliano Saurin e siamo i fondatori di www.urbi.co
+Emiliano and Serena, and we are the founders of www.urbi.co
 "
 
-home: Map
+home: MAP
 faq: FAQ
-addBusiness: Add Business
+addBusiness: ADD BUSINESS
 ---
