@@ -1,8 +1,8 @@
 ---
-title: Help your favourite local businesses
-description: "A causa dell'emergenza COVID-19 molte attività commerciali sono costrette a chiudere al pubblico, ma i costi fissi rimangono. Vogliamo dare modo di supportare i nostri ristoranti, locali e negozi del 💚 per poter superare questo periodo. Un modo per aiutare può essere acquistare ora un Voucher che si potrà utilizzare in futuro.
+title: Help your favourite Local Businesses
+description: "A lot of Local Businesses are in difficult economic times because of COVID-19 emergency; some might close forever. We want to help now our beloved restaurants, bars and shops 💚as we want to enjoy them again once our lifestyle is back to normal. How?
 
-Acquista ora una Gift Card da usare dopo, aiuta i tuoi posti preferiti oppure contribuisci a far crescere la lista!"
+Get a Gift Card now to use in the future, help your favourite places or help us increase the proposed list!"
 gotoVoucher: Get a Gift Card
 searchsuggestion: Search...
 
