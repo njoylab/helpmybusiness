@@ -1,5 +1,5 @@
 DefaultContentLanguage = "en"
-baseURL = "https://helpmybusiness-752eb.web.app/"
+baseURL = "https://loveourlocals.org/"
 theme = "simplemap"
 publishDir = "../firebase/public/"
 defaultContentLanguageInSubdir = true
@@ -7,11 +7,11 @@ enableIPtoCoords = true
 contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMpofblTBczNJ-2_IPTNB6aeiVCQ/viewform"
 [languages]
     [languages.en]
-        title = "Support our restaurants"
+        title = "Love Our Locals"
         weight = 1
         languageCode = "en-us"
      [languages.it]
-        title = "Supporta le tue attività preferite"
+        title = "Love Our Locals"
         weight = 2
         languageCode = "it-it"
         contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform"

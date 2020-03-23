@@ -1,6 +1,6 @@
 [
   {
-    "origin": ["https://helpmybusiness-752eb.web.app/","https://helpmybusiness-752eb.firebaseapp.com/"],
+    "origin": ["https://loveourlocals.org/"],
     "method": ["GET"],
     "maxAgeSeconds": 300 
   }
