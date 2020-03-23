@@ -29,10 +29,7 @@
   </p>
 </div>
 <script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.GooglePlacesKey }}&libraries=places"></script>
-<script src="/__/firebase/7.12.0/firebase-app.js"></script>
-<script src="/__/firebase/7.12.0/firebase-analytics.js"></script>
-<script src="/__/firebase/init.js"></script>
-<script src="/__/firebase/7.12.0/firebase-firestore.js"></script>
+{{ partial "firebase.html" . }}
 
 <script>
 
@@ -48,9 +45,10 @@ var selectedPlace = {}
 
 function initAutocomplete() {
   const input = document.getElementById('business');
+  const country = localStorage.country_code ?? 'it';
   const options = {
       types:['establishment'],
-      componentRestrictions:{'country': ['it']}
+      componentRestrictions:{'country': [country]}
   };
   const autocomplete = new google.maps.places.Autocomplete(input, options);
   autocomplete.setFields(['formatted_address', 'geometry', 'name', 'place_id','photos']);
@@ -129,6 +127,5 @@ function initAutocomplete() {
     return !!pattern.test(str);
   }
   initAutocomplete();
-  firebase.analytics()
 </script>
 {{ end }}

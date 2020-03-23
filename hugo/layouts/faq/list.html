@@ -7,14 +7,11 @@
 </ul>
 <div class="container">
   <h1 id="title">{{ .Title }}</h1>
-
   <p>
     {{ .Params.Description | markdownify  }}
   </p>
 </div>
 
-<script src="/__/firebase/7.12.0/firebase-app.js"></script>
-<script src="/__/firebase/7.12.0/firebase-analytics.js"></script>
-<script src="/__/firebase/init.js"></script>
-<script>firebase.analytics()</script>
+{{ partial "firebase.html" . }}
+
 {{ end }}
