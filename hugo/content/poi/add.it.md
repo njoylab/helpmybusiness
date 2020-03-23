@@ -15,7 +15,7 @@ validatePlaceURL: Inserisci il link alla sezione della pagina web dove l'attivit
 sucess: Grazie per il tuo contributo, l'attività sarà aggiunta al più presto sulla mappa.
 error: Ci spiace, si è verificato un problema, controlla che l'attività non sia già presente
 
-home: Mappa
+home: MAPPA
 faq: FAQ
-addBusiness: Aggiungi attività
+addBusiness: AGGIUNGI ATTIVITA'
 ---

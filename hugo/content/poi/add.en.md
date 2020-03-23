@@ -16,7 +16,7 @@ validatePlaceURL: Enter a web page link where the Business sell its vouchers/gif
 sucess: Thank you for your contribution. The Business will be soon added to the map.
 error: We are sorry, an error occurred. Please check that the Business is not already added.
 
-home: Map
+home: MAP
 faq: FAQ
-addBusiness: Add Local Business
+addBusiness: ADD BUSINESS
 ---

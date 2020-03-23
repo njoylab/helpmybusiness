@@ -36,7 +36,7 @@ In generale \"stai a casa\" ( cit.) e cerca di ordinare almeno una volta a setti
 Emiliano Saurin e Serena Schimd, e siamo i fondatori di www.urbi.co
 "
 
-home: Mappa
+home: MAPPA
 faq: FAQ
-addBusiness: Aggiungi Attività
+addBusiness: AGGIUNGI ATTIVITA'
 ---
