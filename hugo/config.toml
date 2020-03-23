@@ -3,8 +3,6 @@ baseURL = "https://loveourlocals.org/"
 theme = "simplemap"
 publishDir = "../firebase/public/"
 defaultContentLanguageInSubdir = true
-enableIPtoCoords = false
-contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMpofblTBczNJ-2_IPTNB6aeiVCQ/viewform"
 [languages]
     [languages.en]
         title = "Love Our Locals"
@@ -14,14 +12,18 @@ contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLSfrMuxIVvACmOjhjfJTrZKMp
         title = "Love Our Locals"
         weight = 2
         languageCode = "it-it"
-        contactFrom = "https://docs.google.com/forms/d/e/1FAIpQLScaTOWhCVtAa641_-dnWr_9OJ-sfGK0QO7sF_MTioPZPD9RtA/viewform"
 [params]
     MapboxAccessToken = ""
     MapboxTheme = "mapbox://styles/mapbox/light-v10"
-    GeoJSON = "https://storage.googleapis.com/helpmybusiness-752eb.appspot.com/poi/poi.gjson?v1"
+    GooglePlacesKey = ""
+    GeoJSON = "https://storage.googleapis.com/helpmybusiness-752eb.appspot.com/poi/poi.gjson?v2"
+    EnableIPtoCoords = false
+    FirestoreCollection = "poi"
+    FiresBaseHosting = false
     FirebaseApiKey = ""
     FirebaseApiKeyAuthDomain = ""
     FirebaseProjectId = ""
-    FirestoreCollection = "poi"
-    GooglePlacesKey = ""
+    FirebaseAppId = ""
+    FirebaseMeasurementId = ""
+
     
