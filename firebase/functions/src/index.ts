@@ -1,7 +1,6 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 
-
 admin.initializeApp();
 
 // on write let's generate the file
@@ -50,7 +49,8 @@ async function generateData(): Promise<any> {
                     "title": poiData.title,
                     "address": poiData.address,
                     "image": poiData.image,
-                    "url": poiData.url
+                    "url": poiData.url,
+                    "source": poiData.source
                 }
             }
             features.push( poi);
@@ -69,8 +69,8 @@ async function generateData(): Promise<any> {
 
 export const generateGeoJSON = functions.https.onRequest( (request, response) => {
         return generateData().then( (data) => {
-            const contentType = "text/json";
-            response.set("Content-Type", contentType);
-            response.status(200).send(data)
+
+            response.set("Content-Type",  "text/json");
+            response.status(200).send(data);
         });
 });

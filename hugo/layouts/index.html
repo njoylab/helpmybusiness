@@ -152,7 +152,14 @@
           console.log("{{.Params.gotoVoucher}}")
             const coordinates = e.features[0].geometry.coordinates.slice();       
             const action = "{{ .Params.gotoVoucher }}";
-            const description =`<h3>${e.features[0].properties.title}</h3><span>${e.features[0].properties.address}</span><img class="preview" src="${e.features[0].properties.image}" /><a href="${e.features[0].properties.url}" target="_blank"><button class="btn info">${action}</button></a>`
+
+            const source = e.features[0].properties.source ? e.features[0].properties.source : '';
+            let source_txt = '';
+            if( source) {
+               source_txt = "<small>source: <a target=_blank href="+ e.features[0].properties.source +">"+source.replace( 'https://', '').replace( 'www.', '')+"</a></small>";
+            }
+
+            const description =`<h3>${e.features[0].properties.title}</h3><span>${e.features[0].properties.address}</span><img class="preview" src="${e.features[0].properties.image}" /><a href="${e.features[0].properties.url}" target="_blank"><button class="btn info">${action}</button></a>${source_txt}`;
 
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
