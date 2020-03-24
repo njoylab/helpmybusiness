@@ -7,12 +7,11 @@ containts the [HUGO](https://gohugo.io/) project that generate the static websit
 contains the static website generate from HUGO and the function that generate the geojson
 
 
+## Frontend
+
 ### Configuration
 
 edit hugo/config.toml
-
-
-## Frontend
 
 ```
 [params]
@@ -32,7 +31,7 @@ edit hugo/config.toml
 ```
 
 
-###### dev site
+#### dev site
 
 After you've compiled the config File you can start hugo server locally
 
@@ -41,8 +40,7 @@ cd hugo
 hugo server -D
 ```
 
-
-###### deploy site
+#### deploy site
 
 If you want to deploy on Firebase you need this command
 
@@ -50,12 +48,14 @@ Remove old generated files
 `rm -rf firebase/public/`
 
 Generate new static files using a specific configuration file for production
+
 ```
 cd hugo
 hugo --minify --config=config-prod.toml
 ```
 
-Deploy
+Deploy to Firebase Hosting
+
 ```
 cd ../firebase
 firebase deploy --only hosting
@@ -64,7 +64,7 @@ firebase deploy --only hosting
 
 ## Backend
 
-###### deploy functions
+#### deploy functions
 
 It has 1 function written in TypeScript that generates and upload the geojson file to Firebase Storage each time a POI is added
 
