@@ -4,7 +4,7 @@ containts the [HUGO](https://gohugo.io/) project that generate the static websit
 
 ### Firebase
 
-contains the static website generate from HUGO and the function that generate the geojson
+contains the static website generated from HUGO and the firebase function that generate the geojson
 
 
 ## Frontend
